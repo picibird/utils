@@ -1,1 +1,1 @@
-console.log("hello world");
+export * as query from './query'

@@ -1,5 +1,5 @@
 {
-  "name": "@picibird/server",
+  "name": "@picibird/server-util",
   "version": "1.0.0",
   "description": "utils for cloud native stacks",
   "repository": {
@@ -11,7 +11,12 @@
   "scripts": {
     "dev": "siroc build -w",
     "build": "siroc build",
-    "test": "siroc run test.ts"
+    "test": "echo \"test\"",
+    "start": "echo \"start\""
+  },
+  "devDependencies": {
+    "@types/node": "^15.9.0",
+    "siroc": "^0.11.0"
   },
   "engines": {
     "node": ">=14 <15"

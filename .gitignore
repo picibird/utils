@@ -4,14 +4,23 @@
 **/build
 **/dist
 
+# Yarn Berry without Zero-Installs
+# .yarn/*
+# !.yarn/cache
+# !.yarn/patches
+# !.yarn/plugins
+# !.yarn/releases
+# !.yarn/sdks
+# !.yarn/versions
+
 # Yarn Berry with Zero-Installs
 .yarn/*
-!.yarn/cache
 !.yarn/patches
-!.yarn/plugins
 !.yarn/releases
+!.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+.pnp.*
 
 # Logs
 **/logs

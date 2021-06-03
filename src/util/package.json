@@ -7,14 +7,29 @@
   },
   "license": "ISC",
   "author": "Marcus Specht <me@masp.io> (https://picibird.com)",
-  "main": "dist/index.js",
+  "exports": {
+    "./templates/*": "./dist/templates/*"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "bin": {
+    "pici-util": "bin/cli.js"
+  },
   "scripts": {
     "dev": "siroc build -w",
     "build": "siroc build",
-    "test": "siroc run test.ts"
+    "postbuild": "npm link",
+    "prestart": "yarn build",
+    "start": "pici-util",
+    "test": "siroc run test/index.ts"
   },
   "dependencies": {
-    "@types/node": "^15.9.0"
+    "qs": "^6.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.9.0",
+    "@types/qs": "^6.9.6",
+    "siroc": "^0.11.0"
   },
   "engines": {
     "node": ">=14 <15"

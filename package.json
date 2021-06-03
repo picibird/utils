@@ -9,18 +9,19 @@
   "author": "Marcus Specht <me@masp.io> (https://picibird.com)",
   "private": true,
   "workspaces": [
-    "./src/*"
+    "./src/cli",
+    "./src/client",
+    "./src/server",
+    "./src/util"
   ],
   "scripts": {
-    "dev": "yarn ws dev",
-    "build": "yarn ws build",
-    "test": "yarn ws test",
-    "ws": "yarn workspaces foreach -pt run dev",
+    "dev": "yarn ws-run dev",
+    "build": "yarn ws-run build",
+    "test": "yarn ws-run test",
+    "start": "yarn ws-run start",
+    "ws-run": "yarn workspaces run",
     "check-env": "node -e 'console.log(process.env)' | grep npm",
     "g:tsc": "cd $INIT_CWD && tsc --tsconfig=${PROJECT_CWD}/.ts-config.json"
-  },
-  "devDependencies": {
-    "typescript": "4.3.2"
   },
   "engines": {
     "node": ">=14 <15"

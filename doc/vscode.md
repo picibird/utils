@@ -2,6 +2,7 @@
 
 ## Plugins
 
+- [antfu.browse-lite](https://github.com/antfu/vscode-browse-lite)
 - [vscode-jupyter](https://github.com/microsoft/vscode-jupyter)
 - [codetour](https://github.com/microsoft/codetour)
 - [vscode-nodebook](https://github.com/microsoft/vscode-nodebook)
