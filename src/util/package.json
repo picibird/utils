@@ -1,0 +1,22 @@
+{
+  "name": "@picibird/util",
+  "version": "1.0.0",
+  "description": "utils for cloud native stacks",
+  "repository": {
+    "url": "https://github.com/picibird/utils"
+  },
+  "license": "ISC",
+  "author": "Marcus Specht <me@masp.io> (https://picibird.com)",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "siroc build -w",
+    "build": "siroc build",
+    "test": "siroc run test.ts"
+  },
+  "dependencies": {
+    "@types/node": "^15.9.0"
+  },
+  "engines": {
+    "node": ">=14 <15"
+  }
+}

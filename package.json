@@ -1,0 +1,24 @@
+{
+  "name": "@picibird/utils",
+  "version": "1.0.0",
+  "description": "utils for cloud native stacks",
+  "repository": {
+    "url": "https://github.com/picibird/utils"
+  },
+  "license": "ISC",
+  "author": "Marcus Specht <me@masp.io> (https://picibird.com)",
+  "private": true,
+  "workspaces": [
+    "./src/*"
+  ],
+  "scripts": {
+    "dev": "yarn ws dev",
+    "build": "yarn ws build",
+    "test": "yarn ws test",
+    "ws": "yarn workspaces foreach -pt run dev",
+    "check-env": "node -e 'console.log(process.env)' | grep npm"
+  },
+  "engines": {
+    "node": ">=14 <15"
+  }
+}
