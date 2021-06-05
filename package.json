@@ -15,15 +15,21 @@
     "./src/util"
   ],
   "scripts": {
-    "dev": "yarn ws-run dev",
-    "build": "yarn ws-run build",
-    "test": "yarn ws-run test",
-    "start": "yarn ws-run start",
-    "ws-run": "yarn workspaces run",
-    "check-env": "node -e 'console.log(process.env)' | grep npm",
-    "g:tsc": "cd $INIT_CWD && tsc --tsconfig=${PROJECT_CWD}/.ts-config.json"
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "pretest": "npm run clean",
+    "test": "npm run test --workspaces",
+    "start": "npm run start --workspaces",
+    "release": "release-it",
+    "clean": "rimraf src/*/dist src/*/build",
+    "reset": "rimraf **/node_modules **/*.lock **/*-lock",
+    "check-env": "node -e 'console.log(process.env)' | grep npm"
   },
   "engines": {
     "node": ">=14 <15"
+  },
+  "devDependencies": {
+    "release-it": "^14.7.0",
+    "release-it-yarn-workspaces": "^2.0.1"
   }
 }

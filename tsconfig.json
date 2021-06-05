@@ -7,11 +7,12 @@
     "lib": ["esnext"],
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "outDir": "lib",
     "declaration": false,
+    "noImplicitAny": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
     "types": ["node"]
   }
 }

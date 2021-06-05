@@ -1,7 +1,0 @@
-{
-  "extends": "../../ts-config.json",
-  "compilerOptions": {
-    "types": ["node", "qs"]
-  },
-  "include": ["src/**/*", "tests/**/*"]
-}

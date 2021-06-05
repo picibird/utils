@@ -2,9 +2,7 @@
   "name": "@picibird/util",
   "version": "1.0.0",
   "description": "utils for cloud native stacks",
-  "repository": {
-    "url": "https://github.com/picibird/utils"
-  },
+  "repository": "https://github.com/picibird/utils",
   "license": "ISC",
   "author": "Marcus Specht <me@masp.io> (https://picibird.com)",
   "exports": {
@@ -12,16 +10,17 @@
   },
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
-  "bin": {
-    "pici-util": "bin/cli.js"
-  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "dist/index.d.ts",
+    "!**/*.map"
+  ],
   "scripts": {
     "dev": "siroc build -w",
     "build": "siroc build",
-    "postbuild": "npm link",
-    "prestart": "yarn build",
-    "start": "pici-util",
-    "test": "siroc run test/index.ts"
+    "pretest": "tsc -b ./tsconfig.test.json",
+    "test": "testyts"
   },
   "dependencies": {
     "qs": "^6.10.1"
@@ -29,7 +28,8 @@
   "devDependencies": {
     "@types/node": "^15.9.0",
     "@types/qs": "^6.9.6",
-    "siroc": "^0.11.0"
+    "siroc": "^0.11.0",
+    "testyts": "^1.4.0"
   },
   "engines": {
     "node": ">=14 <15"

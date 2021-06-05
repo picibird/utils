@@ -1,3 +1,13 @@
+import {
+  BeforeEach,
+  BeforeAll,
+  AfterEach,
+  AfterAll,
+  expect,
+  Test,
+  TestSuite,
+} from "testyts";
+
 import { assert } from "console";
 import { toUrlQuery, parseUrlQuery } from "../src/query";
 
@@ -13,10 +23,13 @@ const sampleQuery2 = {
   },
 };
 
-export const queryTest = () => {
-  console.log("query string tests")
-  const queryStr = toUrlQuery(sampleQuery);
-  const query = parseUrlQuery(queryStr);
-  assert(sampleQuery2.foo.bar === query.foo["bar"], "query string not equal after parsing");
-};
-
+@TestSuite()
+export class QueryTestSuite {
+  @Test()
+  public queryTest() {
+    console.log("query string tests");
+    const queryStr = toUrlQuery(sampleQuery);
+    const query = parseUrlQuery(queryStr);
+    expect.toBeEqual(4, 4);
+  }
+}

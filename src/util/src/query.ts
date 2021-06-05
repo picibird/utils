@@ -2,7 +2,7 @@
  * query string utilities
  * https://github.com/ljharb/qs
  */
-import qs = require("qs");
+import qs from "qs";
 
 type queryFilter =
   | Array<string | number>
@@ -35,3 +35,9 @@ export const toUrlQuery = (
 
 export const parseUrlQuery = (str: string, opts?: qs.IParseOptions) =>
   qs.parse(str, opts);
+
+export const query = {
+  cleanQuery,
+  toUrlQuery,
+  parseUrlQuery,
+};
