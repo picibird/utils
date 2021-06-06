@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.test.json",
   "compilerOptions": {
     "module": "commonjs",
-    "outDir": "build"
+    "outDir": ".build"
   },
   "exclude": ["node_modules"]
 }

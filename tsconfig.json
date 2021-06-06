@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "types": ["node"]
+    "types": ["node"],
+    "noImplicitAny": false
   }
 }

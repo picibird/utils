@@ -7,8 +7,9 @@
   },
   "license": "ISC",
   "author": "Marcus Specht <me@masp.io> (https://picibird.com)",
-  "main": "dist/index.js",
+  "main": ".dist/index.js",
   "scripts": {
+    "tsc": "tsc -b",
     "dev": "siroc build -w",
     "build": "siroc build",
     "test": "echo \"test\"",

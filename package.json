@@ -15,13 +15,14 @@
     "./src/util"
   ],
   "scripts": {
+    "tsc": "npm run tsc --workspaces",
     "dev": "npm run dev --workspaces",
     "build": "npm run build --workspaces",
     "pretest": "npm run clean",
     "test": "npm run test --workspaces",
     "start": "npm run start --workspaces",
     "release": "release-it",
-    "clean": "rimraf src/*/dist src/*/build",
+    "clean": "rimraf src/*/.dist src/*/.build",
     "reset": "rimraf **/node_modules **/*.lock.json",
     "reinstall": "npm run clean && npm run reset && npm install",
     "check-env": "node -e 'console.log(process.env)' | grep npm"

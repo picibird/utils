@@ -1,8 +1,8 @@
 # Pici
 **/.cache
 **/.log
-**/build
-**/dist
+**/.build
+**/.dist
 
 # Yarn Berry without Zero-Installs
 # .yarn/*

@@ -6,21 +6,23 @@
   "license": "ISC",
   "author": "Marcus Specht <me@masp.io> (https://picibird.com)",
   "exports": {
-    "./templates/*": "./dist/templates/*"
+    "./templates/*": "./.dist/templates/*"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.es.js",
-  "types": "./dist/index.d.ts",
+  "main": "./.dist/index.js",
+  "module": "./.dist/index.es.js",
+  "types": "./.dist/index.d.ts",
   "files": [
-    "dist/**/*",
-    "dist/index.d.ts",
+    ".dist/**/*",
+    ".dist/index.d.ts",
     "!**/*.map"
   ],
   "scripts": {
+    "tsc": "tsc -b",
     "dev": "siroc build -w",
     "build": "siroc build",
     "pretest": "tsc -b ./tsconfig.test.json",
-    "test": "testyts"
+    "test": "testyts",
+    "test:full": "nyc testyts"
   },
   "dependencies": {
     "@alumna/reflect": "^1.0.5",

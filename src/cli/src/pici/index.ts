@@ -32,7 +32,7 @@ async function promptForMissingOptions(options) {
     };
   }
 
-  const questions = [];
+  const questions: Array<any> = [];
   if (!options.template) {
     questions.push({
       type: "list",

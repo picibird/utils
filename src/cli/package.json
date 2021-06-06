@@ -11,6 +11,7 @@
     "siroc": "bin/pici.js"
   },
   "scripts": {
+    "tsc": "tsc -b",
     "dev": "siroc build -w",
     "build": "siroc build",
     "test": "echo \"test\"",
