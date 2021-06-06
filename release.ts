@@ -60,7 +60,7 @@ const options = {
   github,
 };
 
-release(options).then((output) => {
+release(options).then((output: any) => {
   console.log(output);
   // { version, latestVersion, name, changelog }
 });

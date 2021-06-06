@@ -5,6 +5,10 @@
     "module": "commonjs",
     "lib": ["es6"],
     "experimentalDecorators": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "noErrorTruncation": true,
+    "removeComments": false,
+    "traceResolution": false,
+    "noImplicitAny": false
   }
 }

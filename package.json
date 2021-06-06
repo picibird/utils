@@ -22,7 +22,8 @@
     "start": "npm run start --workspaces",
     "release": "release-it",
     "clean": "rimraf src/*/dist src/*/build",
-    "reset": "rimraf **/node_modules **/*.lock **/*-lock",
+    "reset": "rimraf **/node_modules **/*.lock.json",
+    "reinstall": "npm run clean && npm run reset && npm install",
     "check-env": "node -e 'console.log(process.env)' | grep npm"
   },
   "engines": {

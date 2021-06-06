@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": false,
+    "listFiles": false,
+    "listEmittedFiles": true,
+    "noEmitOnError": true,
+    "stripInternal": true
+  }
+}
