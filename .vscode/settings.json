@@ -8,8 +8,8 @@
     "**/node_modules": true,
     "**/.cache": true,
     "**/.nuxt": true,
-    "**/.build": false,
-    "**/.dist": false,
+    "**/.build": true,
+    "**/.dist": true,
     "**/*.lock": true,
     "**/*-lock.json": true
   },
