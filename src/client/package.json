@@ -1,19 +1,30 @@
 {
   "name": "@picibird/client-util",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "utils for cloud native stacks",
   "repository": {
     "url": "https://github.com/picibird/utils"
   },
   "license": "ISC",
   "author": "Marcus Specht <me@masp.io> (https://picibird.com)",
-  "browser": ".dist/index.js",
+  "main": "./.dist/index.js",
+  "module": "./.dist/index.es.js",
+  "browser": "./.dist/index.js",
+  "types": "./.dist/index.d.ts",
+  "files": [
+    ".dist/**/*",
+    ".dist/index.d.ts",
+    "!**/*.map"
+  ],
   "scripts": {
     "tsc": "tsc -b",
     "dev": "siroc build -w",
     "build": "siroc build",
     "test": "echo \"test\"",
-    "start": "echo \"start\""
+    "start": "echo \"start\"",
+    "clean": "rimraf .build .dist",
+    "prepare": "npm run clean && npm run build",
+    "release": "npm version patch && npm publish"
   },
   "devDependencies": {
     "@types/node": "^15.12.2",

@@ -1,6 +1,6 @@
 {
   "name": "@picibird/util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "utils for cloud native stacks",
   "repository": "https://github.com/picibird/utils",
   "license": "ISC",
@@ -22,7 +22,10 @@
     "build": "siroc build",
     "pretest": "tsc -b ./tsconfig.test.json",
     "test": "testyts",
-    "test:full": "nyc testyts"
+    "clean": "rimraf .build .dist",
+    "test:full": "nyc testyts",
+    "prepare": "npm run clean && npm run build",
+    "release": "npm version patch && npm publish"
   },
   "dependencies": {
     "@alumna/reflect": "^1.0.5",

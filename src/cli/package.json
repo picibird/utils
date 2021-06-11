@@ -1,6 +1,6 @@
 {
   "name": "@picibird/cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "utils for cloud native stacks",
   "repository": {
     "url": "https://github.com/picibird/utils"
@@ -15,7 +15,10 @@
     "dev": "siroc build -w",
     "build": "siroc build",
     "test": "echo \"test\"",
-    "start": "echo \"start\""
+    "start": "echo \"start\"",
+    "clean": "rimraf .build .dist",
+    "prepare": "npm run clean && npm run build",
+    "release": "npm version patch && npm publish"
   },
   "dependencies": {
     "arg": "^5.0.0",
