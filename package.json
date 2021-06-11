@@ -23,7 +23,7 @@
     "start": "npm run start --workspaces",
     "release": "release-it",
     "clean": "rimraf src/*/.dist src/*/.build",
-    "reset": "rimraf **/node_modules **/*.lock.json",
+    "reset": "rimraf **/node_modules **/*lock*.json",
     "reinstall": "npm run clean && npm run reset && npm install",
     "check-env": "node -e 'console.log(process.env)' | grep npm"
   },
@@ -32,7 +32,7 @@
     "npm": ">=7"
   },
   "devDependencies": {
-    "release-it": "^14.7.0",
+    "release-it": "^14.8.0",
     "release-it-yarn-workspaces": "^2.0.1"
   }
 }

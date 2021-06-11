@@ -38,3 +38,7 @@ AMD is asynchronous and good for front end.
 ## Release
 
 [release-it default config](https://github.com/release-it/release-it/blob/master/config/release-it.json)
+
+## Git
+
+- [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/)
