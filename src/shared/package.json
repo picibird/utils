@@ -1,6 +1,6 @@
 {
-  "name": "@picibird/util",
-  "version": "1.0.1",
+  "name": "@picibird/shared",
+  "version": "1.0.2",
   "description": "utils for cloud native stacks",
   "repository": "https://github.com/picibird/utils",
   "license": "ISC",
@@ -20,10 +20,7 @@
     "tsc": "tsc -b",
     "dev": "siroc build -w",
     "build": "siroc build",
-    "pretest": "tsc -b ./tsconfig.test.json",
-    "test": "testyts",
     "clean": "rimraf .build .dist",
-    "test:full": "nyc testyts",
     "prepare": "npm run clean && npm run build",
     "release": "npm version patch && npm publish"
   },
@@ -33,12 +30,9 @@
     "qs": "^6.10.1"
   },
   "devDependencies": {
-    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/node": "^15.12.2",
     "@types/qs": "^6.9.6",
-    "nyc": "^15.1.0",
-    "siroc": "^0.11.0",
-    "testyts": "^1.4.0"
+    "siroc": "^0.11.0"
   },
   "engines": {
     "node": ">=14 <15"

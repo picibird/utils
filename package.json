@@ -12,18 +12,24 @@
     "./src/cli",
     "./src/client",
     "./src/server",
-    "./src/util"
+    "./src/shared",
+    "./src/test"
   ],
   "scripts": {
-    "tsc": "npm run tsc --workspaces",
-    "dev": "npm run dev --workspaces",
-    "build": "npm run build --workspaces",
-    "test": "npm run test --workspace=test",
-    "start": "npm run start --workspaces",
-    "release": "npm run release --workspaces",
+    "dev": "npm run dev --ws --if-present",
+    "build": "npm run build --ws --if-present",
+    "start": "npm run start --ws --if-present",
+    "test": "npm run test -w=./src/test",
+    "pretest": "npm run clean && npm run build",
+    "release": "npm run release --ws --if-present",
+    "prerelease": "npm run test",
+    "upgrade": "npm update --ws",
+    "upgrade:check": "ncu --deep --greatest",
+    "upgrade:latest": "ncu --deep --greatest --upgrade",
+    "postrelease": "npm publish --access=restricted",
     "clean": "rimraf src/*/.dist src/*/.build",
     "reset": "rimraf **/node_modules **/*lock*.json",
-    "reinstall": "npm run clean && npm run reset && npm install",
+    "postreset": "npm run clean && npm install && npm run test",
     "check-env": "node -e 'console.log(process.env)' | grep npm"
   },
   "engines": {

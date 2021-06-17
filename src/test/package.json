@@ -5,34 +5,17 @@
   "repository": "https://github.com/picibird/utils",
   "license": "ISC",
   "author": "Marcus Specht <me@masp.io> (https://picibird.com)",
-  "exports": {
-    "./templates/*": "./.dist/templates/*"
-  },
-  "main": "./.dist/index.js",
-  "module": "./.dist/index.es.js",
-  "types": "./.dist/index.d.ts",
-  "files": [
-    ".dist/**/*",
-    ".dist/index.d.ts",
-    "!**/*.map"
-  ],
+  "main": "index.js",
   "scripts": {
-    "tsc": "tsc -b",
-    "dev": "siroc build -w",
-    "build": "siroc build",
-    "pretest": "tsc -b ./tsconfig.test.json",
     "test": "testyts",
-    "clean": "rimraf .build .dist",
-    "test:full": "nyc testyts",
-    "prepare": "npm run clean && npm run build",
-    "release": "npm version patch && npm publish"
+    "test:coverage": "nyc testyts"
   },
   "dependencies": {
+    "@picibird/shared": "*"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/node": "^15.12.2",
-    "@types/qs": "^6.9.6",
     "nyc": "^15.1.0",
     "siroc": "^0.11.0",
     "testyts": "^1.4.0"

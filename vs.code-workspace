@@ -1,8 +1,8 @@
 {
   "folders": [
     {
-      "name": "root",
-      "path": "root"
+      "name": "@picibird/cli",
+      "path": "src/cli"
     },
     {
       "name": "@picibird/client",

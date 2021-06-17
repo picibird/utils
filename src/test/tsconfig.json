@@ -1,16 +1,21 @@
+
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
     "lib": ["es6"],
+    "allowJs": true,
+    "outDir": "build",
+    "rootDir": "src",
+    "strict": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "noErrorTruncation": true,
-    "removeComments": false,
-    "traceResolution": false,
-    "noImplicitAny": false
+    "types": ["node"],
+    "typeRoots": ["./node_modules/@types"]
   },
-
-  "exclude": ["node_modules"]
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test.ts"]
 }
