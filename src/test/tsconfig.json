@@ -10,5 +10,7 @@
     "removeComments": false,
     "traceResolution": false,
     "noImplicitAny": false
-  }
+  },
+
+  "exclude": ["node_modules"]
 }

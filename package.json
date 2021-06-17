@@ -18,7 +18,7 @@
     "tsc": "npm run tsc --workspaces",
     "dev": "npm run dev --workspaces",
     "build": "npm run build --workspaces",
-    "test": "npm run test --workspaces",
+    "test": "npm run test --workspace=test",
     "start": "npm run start --workspaces",
     "release": "npm run release --workspaces",
     "clean": "rimraf src/*/.dist src/*/.build",

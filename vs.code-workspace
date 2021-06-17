@@ -13,8 +13,12 @@
       "path": "src/server"
     },
     {
-      "name": "@picibird/util",
-      "path": "src/util"
+      "name": "@picibird/shared",
+      "path": "src/shared"
+    },
+    {
+      "name": "@picibird/test",
+      "path": "src/test"
     }
   ],
   "extensions": {

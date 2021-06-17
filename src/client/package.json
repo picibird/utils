@@ -1,5 +1,5 @@
 {
-  "name": "@picibird/client-util",
+  "name": "@picibird/client",
   "version": "1.0.2",
   "description": "utils for cloud native stacks",
   "repository": {
@@ -25,6 +25,9 @@
     "clean": "rimraf .build .dist",
     "prepare": "npm run clean && npm run build",
     "release": "npm version patch && npm publish"
+  },
+  "dependencies": {
+    "register-service-worker": "^1.7.2"
   },
   "devDependencies": {
     "@types/node": "^15.12.2",

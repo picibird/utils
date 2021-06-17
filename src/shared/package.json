@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@alumna/reflect": "^1.0.5",
+    "merge-anything": "^4.0.1",
     "qs": "^6.10.1"
   },
   "devDependencies": {

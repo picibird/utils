@@ -1,0 +1,6 @@
+{
+  "include": ["./src/**/*.test.ts"],
+  "reporter": "standard",
+  "tsconfig": "./tsconfig.json",
+  "timeout": 3000
+}
