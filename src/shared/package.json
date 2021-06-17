@@ -6,6 +6,10 @@
   "license": "ISC",
   "author": "Marcus Specht <me@masp.io> (https://picibird.com)",
   "exports": {
+    ".": {
+      "require": "./.dist/index.js",
+      "import": "./.dist/index.es.js"
+    },
     "./templates/*": "./.dist/templates/*"
   },
   "main": "./.dist/index.js",

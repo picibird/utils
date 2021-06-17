@@ -8,8 +8,7 @@ import {
   TestSuite,
 } from "testyts";
 
-import { assert } from "console";
-export { query } from "@picibird/shared";
+import { query } from "./index";
 
 const sampleQuery = {
   foo: {
