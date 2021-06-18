@@ -1,6 +1,6 @@
 {
   "name": "@picibird/client",
-  "version": "1.0.3",
+  "version": "1.0.10",
   "description": "utils for cloud native stacks",
   "repository": {
     "url": "https://github.com/picibird/utils"
@@ -23,7 +23,6 @@
     "test": "echo \"test\"",
     "start": "echo \"start\"",
     "clean": "rimraf .build .dist",
-    "prepare": "npm run clean && npm run build",
     "release": "npm version patch && npm publish"
   },
   "dependencies": {

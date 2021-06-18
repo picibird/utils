@@ -1,6 +1,6 @@
 {
   "name": "@picibird/shared",
-  "version": "1.0.2",
+  "version": "1.0.8",
   "description": "utils for cloud native stacks",
   "repository": "https://github.com/picibird/utils",
   "license": "ISC",
@@ -23,10 +23,7 @@
   "scripts": {
     "tsc": "tsc -b",
     "dev": "siroc build -w",
-    "build": "siroc build",
-    "clean": "rimraf .build .dist",
-    "prepare": "npm run clean && npm run build",
-    "release": "npm version patch && npm publish"
+    "build": "siroc build"
   },
   "dependencies": {
     "@alumna/reflect": "^1.0.5",
