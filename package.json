@@ -9,11 +9,7 @@
   "author": "Marcus Specht <me@masp.io> (https://picibird.com)",
   "private": true,
   "workspaces": [
-    "./src/cli",
-    "./src/client",
-    "./src/server",
-    "./src/shared",
-    "./src/test"
+    "src/*"
   ],
   "scripts": {
     "dev": "npm run dev --ws --if-present",
@@ -21,9 +17,8 @@
     "start": "npm run start --ws --if-present",
     "test": "npm run test -w=./src/test",
     "pretest": "npm run clean && npm run build",
-    "release": "npm run release --ws --if-present",
-    "prerelease": "npm run test && npm version patch --ws",
-    "postrelease": "npm publish --access=restricted",
+    "release": "npm run test && npm version patch --ws",
+    "postrelease": "npm publish -w=./src/shared -w=./src/client -w=./src/server -w=./src/cli --access=restricted",
     "clean": "rimraf src/*/.dist src/*/.build",
     "reset": "rimraf **/node_modules **/*lock*.json",
     "postreset": "npm install && npm run test",
