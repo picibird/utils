@@ -24,11 +24,10 @@
     "release": "npm run release --ws --if-present",
     "prerelease": "npm run test && npm version patch --ws",
     "postrelease": "npm publish --access=restricted",
-    "upgrade": "ncu --deep --target greatest --upgrade",
-    "postupgrade": "npm run reset",
     "clean": "rimraf src/*/.dist src/*/.build",
     "reset": "rimraf **/node_modules **/*lock*.json",
     "postreset": "npm install && npm run test",
+    "upgrade": "ncu --deep --target greatest --upgrade && npm run reset",
     "check-env": "node -e 'console.log(process.env)' | grep npm"
   },
   "engines": {
