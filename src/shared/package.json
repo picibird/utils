@@ -1,6 +1,6 @@
 {
   "name": "@picibird/shared",
-  "version": "1.0.15",
+  "version": "1.0.17",
   "description": "utils for cloud native stacks",
   "repository": "https://github.com/picibird/utils",
   "license": "ISC",

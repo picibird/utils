@@ -13,7 +13,11 @@
 - [awesome-typescript](https://github.com/dzharii/awesome-typescript)
 - [foalts](https://foalts.org/)
 - [zents](https://zents.dev/)
-  
+
+## ES6 Modules
+
+- [ecmascript-modules-dynamic-import](https://dmitripavlutin.com/ecmascript-modules-dynamic-import/)
+
 ## Client
 
 - [register-service-worker](https://github.com/yyx990803/register-service-worker)

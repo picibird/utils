@@ -1,6 +1,6 @@
 {
   "name": "@picibird/server",
-  "version": "1.0.16",
+  "version": "1.0.18",
   "description": "utils for cloud native stacks",
   "repository": {
     "url": "https://github.com/picibird/utils"

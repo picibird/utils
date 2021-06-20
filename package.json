@@ -14,15 +14,16 @@
   "scripts": {
     "dev": "npm run dev --ws --if-present",
     "build": "npm run build --ws --if-present",
+    "rebuild": "npm run clean && npm run build",
+    "test": "npm run rebuild && npm run test -w=./src/test",
     "start": "npm run start --ws --if-present",
-    "test": "npm run test -w=./src/test",
-    "pretest": "npm run clean && npm run build",
-    "release": "npm run test && npm version patch --ws",
-    "postrelease": "npm publish -w=./src/shared -w=./src/client -w=./src/server -w=./src/cli --access=restricted",
+    "release": "npm run test && npm run bump && npm run pub",
+    "bump": "npm version patch --ws --force",
+    "pub": "npm publish -w=./src/shared -w=./src/client -w=./src/server -w=./src/cli --access=restricted",
     "clean": "rimraf src/*/.dist src/*/.build",
     "reset": "rimraf **/node_modules **/*lock*.json",
-    "postreset": "npm install && npm run test",
-    "upgrade": "ncu --deep --target greatest --upgrade && npm run reset",
+    "reinstall": "npm run reset && npm install",
+    "upgrade": "ncu --deep --target greatest --upgrade",
     "check-env": "node -e 'console.log(process.env)' | grep npm"
   },
   "engines": {
