@@ -22,8 +22,13 @@
     "test": "echo \"test\"",
     "start": "echo \"start\""
   },
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-graceful-shutdown": "^3.1.2"
+  },
   "devDependencies": {
-    "@types/node": "^15.12.2",
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.4.7",
     "siroc": "^0.11.0"
   },
   "engines": {

@@ -1,27 +1,31 @@
 import arg from "arg";
-import inquirer from 'inquirer';
+import inquirer from "inquirer";
 
 function parseArgumentsIntoOptions(rawArgs) {
   const args = arg(
+    // Types
     {
-      '--git': Boolean,
-      '--yes': Boolean,
-      '--install': Boolean,
-      '-g': '--git',
-      '-y': '--yes',
-      '-i': '--install',
+      "--help": Boolean,
+      "--version": Boolean,
+      "--git": Boolean,
+      "--yes": Boolean,
+      "--install": Boolean,
+      "-g": "--git",
+      "-y": "--yes",
+      "-i": "--install",
     },
+    // Aliases
     {
       argv: rawArgs.slice(2),
     }
   );
   return {
-    skipPrompts: args['--yes'] || false,
-    git: args['--git'] || false,
+    skipPrompts: args["--yes"] || false,
+    git: args["--git"] || false,
     template: args._[0],
-    runInstall: args['--install'] || false,
+    runInstall: args["--install"] || false,
   };
- }
+}
 
 async function promptForMissingOptions(options) {
   const defaultTemplate = "JavaScript";

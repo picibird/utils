@@ -2,9 +2,9 @@
   "compilerOptions": {
     "strict": true,
     "sourceMap": true,
-    "target": "es2018",
-    "module": "esnext",
-    "lib": ["esnext"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext"],
     "esModuleInterop": true,
     "moduleResolution": "node",
     "declaration": false,
